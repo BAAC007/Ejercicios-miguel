@@ -1,0 +1,57 @@
+/* =========================================================
+   UD02 · Hoja de estilos para impresión (media="print")
+   Oculta la interfaz de administración y deja solo el contenido
+   ========================================================= */
+@media print {
+
+  /* 1. Ocultar toda la interfaz que no sirve en papel */
+  body>header,
+  main>nav,
+  main>section#entidades,
+  .separador,
+  body>footer,
+  .mv-asistente,
+  .mv-drawer,
+  .mv-modal-capa,
+  .mv-toast-pila,
+  .mv-btn {
+    display: none !important;
+  }
+
+  /* 2. Dejar el escenario limpio, fondo blanco y texto negro */
+  body {
+    background: #ffffff !important;
+    color: #000000 !important;
+    font-size: 12pt;
+    margin: 2cm;
+  }
+
+  .escenario {
+    padding: 0 !important;
+    overflow: visible !important;
+    background: #ffffff !important;
+  }
+
+  /* 3. Asegurar que las tarjetas y tablas se vean bien al imprimir */
+  .mv-card,
+  table {
+    border: 1px solid #000000 !important;
+    box-shadow: none !important;
+    background: #ffffff !important;
+    color: #000000 !important;
+    page-break-inside: avoid;
+    /* Evita que una tabla se corte entre dos hojas */
+  }
+
+  thead {
+    background: #eeeeee !important;
+    color: #000000 !important;
+  }
+
+  /* 4. Bonus profesional: muestra la URL de los enlaces al imprimir */
+  a[href]::after {
+    content: " (" attr(href) ")";
+    font-size: 9pt;
+    color: #555555;
+  }
+}

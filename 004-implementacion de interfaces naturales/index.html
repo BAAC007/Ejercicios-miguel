@@ -1,12 +1,17 @@
 <!doctype html>
 <html lang="es">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>mavr | interfaz integrada</title>
   <link rel="shortcut icon" href="img/logo.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="css/estilo.css">
+
+  <!-- Requisito UD02: Hojas de estilo externas vinculadas correctamente -->
+  <link rel="stylesheet" href="css/estilo.css" media="screen">
+  <link rel="stylesheet" href="css/impresion.css" media="print">
 </head>
+
 <body class="mavr-iu">
 
   <!-- ==================== CABECERA ==================== -->
@@ -88,12 +93,15 @@
     <div class="mv-asistente-barra" id="mvAsistenteBarra" title="Arrastra para mover">
       <span class="mv-asistente-chispa">✦</span>
       <span>Asistente local</span>
-      <button class="mv-asistente-minimizar" id="mvAsistenteMinimizar" type="button" title="Minimizar" aria-label="Minimizar">—</button>
+      <button class="mv-asistente-minimizar" id="mvAsistenteMinimizar" type="button" title="Minimizar"
+        aria-label="Minimizar">—</button>
     </div>
     <div class="mv-asistente-redactar">
       <textarea id="mvAsistenteEntrada" rows="1" placeholder="Escribe o dicta lo que necesitas…"></textarea>
-      <button class="mv-asistente-micro" id="mvAsistenteMicro" type="button" title="Entrada por voz" aria-label="Entrada por voz">🎤</button>
-      <button class="mv-asistente-enviar" id="mvAsistenteEnviar" type="button" title="Enviar (Intro)" aria-label="Enviar">➜</button>
+      <button class="mv-asistente-micro" id="mvAsistenteMicro" type="button" title="Entrada por voz"
+        aria-label="Entrada por voz">🎤</button>
+      <button class="mv-asistente-enviar" id="mvAsistenteEnviar" type="button" title="Enviar (Intro)"
+        aria-label="Enviar">➜</button>
     </div>
     <div class="mv-asistente-opciones">
       <label class="mv-interruptor" title="Leer en voz alta la respuesta">
@@ -109,4 +117,5 @@
   <!-- Los <template> se cargan desde la carpeta templates/ (componentes externos) -->
   <script src="js/componentes.js"></script>
 </body>
+
 </html>
