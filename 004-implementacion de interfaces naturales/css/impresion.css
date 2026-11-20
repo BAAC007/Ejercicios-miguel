@@ -3,13 +3,12 @@
    Oculta la interfaz de administración y deja solo el contenido
    ========================================================= */
 @media print {
-
   /* 1. Ocultar toda la interfaz que no sirve en papel */
-  body>header,
-  main>nav,
-  main>section#entidades,
+  body > header,
+  main > nav,
+  main > section#entidades,
   .separador,
-  body>footer,
+  body > footer,
   .mv-asistente,
   .mv-drawer,
   .mv-modal-capa,
@@ -33,14 +32,12 @@
   }
 
   /* 3. Asegurar que las tarjetas y tablas se vean bien al imprimir */
-  .mv-card,
-  table {
+  .mv-card, table {
     border: 1px solid #000000 !important;
     box-shadow: none !important;
     background: #ffffff !important;
     color: #000000 !important;
     page-break-inside: avoid;
-    /* Evita que una tabla se corte entre dos hojas */
   }
 
   thead {
